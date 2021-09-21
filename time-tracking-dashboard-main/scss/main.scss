@@ -1,0 +1,215 @@
+
+@use 'colors' as c;
+@use 'desktop';
+@use 'tablet';
+
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+html{
+    font-size: 62.5%;
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+.main-header{
+    font-size: 1.2rem;
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    background-color: c.$neutral-very-dark-blue;
+    height: 100vh;
+    margin: 2rem auto;
+    
+
+    
+}
+
+
+.wrapper{
+    
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+
+    
+
+    .main-card{
+        display: flex;
+        flex-direction: column;
+        background-color: c.$neutral-dark-blue;
+        border-radius: 1.5rem;
+        
+        overflow: hidden;
+
+        
+
+            
+            
+
+        .person__info{
+
+            background-color: c.$primary-blue;
+            display: flex;
+            align-items: center;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            
+            
+            
+            
+            
+
+            img{
+                
+                width: 25%;
+                border: 3px solid #fff;
+                border-radius: 50%;
+            }
+
+            &__details{
+
+                margin-left: 1rem;
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+
+                .name{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+    
+
+        .summary-type{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem 1rem;
+            
+            background-color: c.$neutral-dark-blue;
+            font-size: 2rem;
+
+            .type{
+
+                color: c.$neutral-pale-blue;
+
+                &:hover{
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+    }
+
+    .card{
+        background-color: c.$primary-light-red;
+        padding-top: 3rem;
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        .logo{
+            position: absolute;
+            top: -0.5rem;
+            right: 1rem;
+            width: 50px;
+            height: 50px;
+            z-index: -1;
+        }
+
+        &__info{
+            background-color: c.$neutral-dark-blue;
+            color: #fff;
+            padding: 2rem;
+            border-radius: 1.2rem;
+
+            &:hover{
+                background-color: c.$neutral-desaturated-blue;
+                cursor: pointer;
+            }
+
+            .activity{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h2{
+                    font-weight: 500;
+                }
+            }
+
+            .details{
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .hours{
+                    font-size: 2rem;
+                    font-weight: 300;
+                }
+            }
+
+        }
+
+
+    }
+
+    .card.work{
+
+        background-color: c.$primary-light-red;
+    }
+
+    .card.play{
+
+        background-color: c.$primary-soft-blue;
+    }
+
+    .card.study{
+
+        background-color: c.$primary-light-red-study;
+    }
+
+    .card.exercise{
+
+        background-color: c.$primary-lime-green;
+    }
+
+    .card.social{
+
+        background-color: c.$primary-violet;
+    }
+
+    .card.selfcare{
+
+        background-color: c.$primary-soft-orange;
+    }
+
+
+}
+
+
+

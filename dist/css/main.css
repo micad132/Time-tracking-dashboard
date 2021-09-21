@@ -1,0 +1,224 @@
+@media (min-width: 1000px) {
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  body .wrapper {
+    height: 40%;
+    width: 80%;
+    max-width: 900px;
+    margin: 0;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "main work play study" "main exercise social selfcare";
+  }
+  body .wrapper .main-card {
+    grid-area: main;
+  }
+  body .wrapper .main-card .person__info {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  body .wrapper .main-card .person__info__details {
+    flex-wrap: wrap;
+  }
+  body .wrapper .main-card .person__info__details .main-header {
+    font-weight: 400;
+  }
+  body .wrapper .main-card .person__info__details img {
+    width: 12rem;
+    border: 3px solid red;
+  }
+  body .wrapper .main-card .person__info__details .name {
+    font-size: 3rem;
+  }
+  body .wrapper .main-card .summary-type {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+    gap: 1rem;
+  }
+  body .wrapper .card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  body .wrapper .card .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  body .wrapper .card .details .hours {
+    font-size: 4rem;
+  }
+  body .wrapper .card.work {
+    grid-area: work;
+  }
+  body .wrapper .card.play {
+    grid-area: play;
+  }
+  body .wrapper .card.study {
+    grid-area: study;
+  }
+  body .wrapper .card.exercise {
+    grid-area: exercise;
+  }
+  body .wrapper .card.social {
+    grid-area: social;
+  }
+  body .wrapper .card.selfcare {
+    grid-area: selfcare;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.main-header {
+  font-size: 1.2rem;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  background-color: #0f1424;
+  height: 100vh;
+  margin: 2rem auto;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.wrapper .main-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1f4a;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.wrapper .main-card .person__info {
+  background-color: #5847eb;
+  display: flex;
+  align-items: center;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+.wrapper .main-card .person__info img {
+  width: 25%;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.wrapper .main-card .person__info__details {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.wrapper .main-card .person__info__details .name {
+  font-size: 2rem;
+}
+.wrapper .main-card .summary-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+  background-color: #1c1f4a;
+  font-size: 2rem;
+}
+.wrapper .main-card .summary-type .type {
+  color: #bdc1ff;
+}
+.wrapper .main-card .summary-type .type:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.wrapper .card {
+  background-color: #ff8c66;
+  padding-top: 3rem;
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.wrapper .card .logo {
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+}
+.wrapper .card__info {
+  background-color: #1c1f4a;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1.2rem;
+}
+.wrapper .card__info:hover {
+  background-color: #6f76c8;
+  cursor: pointer;
+}
+.wrapper .card__info .activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .card__info .activity h2 {
+  font-weight: 500;
+}
+.wrapper .card__info .details {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .card__info .details .hours {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.wrapper .card.work {
+  background-color: #ff8c66;
+}
+.wrapper .card.play {
+  background-color: #56c2e6;
+}
+.wrapper .card.study {
+  background-color: #ff5c7c;
+}
+.wrapper .card.exercise {
+  background-color: #4acf81;
+}
+.wrapper .card.social {
+  background-color: #7536d3;
+}
+.wrapper .card.selfcare {
+  background-color: #f1c65b;
+}
+
+/*# sourceMappingURL=main.css.map */
