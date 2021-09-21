@@ -29,7 +29,7 @@ img{
 }
 
 body{
-    font-size: 1rem;
+    
     font-family: 'Rubik', sans-serif;
     background-color: c.$neutral-very-dark-blue;
     height: 100vh;
@@ -44,6 +44,7 @@ body{
     
     width: 90%;
     max-width: 600px;
+    min-height: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -67,6 +68,8 @@ body{
 
         .person__info{
 
+
+            flex-basis: 70%;
             background-color: c.$primary-blue;
             display: flex;
             align-items: center;
@@ -101,6 +104,8 @@ body{
     
 
         .summary-type{
+
+            flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -117,6 +122,10 @@ body{
                     color: #fff;
                     cursor: pointer;
                 }
+            }
+
+            .type.active{
+                color: c.$primary-blue;
             }
 
         }
@@ -170,6 +179,10 @@ body{
                 .hours{
                     font-size: 2rem;
                     font-weight: 300;
+                }
+
+                &__day{
+                    font-size: 1.2rem;
                 }
             }
 

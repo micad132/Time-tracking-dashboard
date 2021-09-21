@@ -26,15 +26,14 @@
     justify-content: space-evenly;
     align-items: flex-start;
   }
+  body .wrapper .main-card .person__info .logo {
+    width: 50%;
+  }
   body .wrapper .main-card .person__info__details {
     flex-wrap: wrap;
   }
   body .wrapper .main-card .person__info__details .main-header {
     font-weight: 400;
-  }
-  body .wrapper .main-card .person__info__details img {
-    width: 12rem;
-    border: 3px solid red;
   }
   body .wrapper .main-card .person__info__details .name {
     font-size: 3rem;
@@ -61,6 +60,9 @@
   body .wrapper .card .details .hours {
     font-size: 4rem;
   }
+  body .wrapper .card .details__day {
+    font-size: 1.2rem;
+  }
   body .wrapper .card.work {
     grid-area: work;
   }
@@ -78,6 +80,35 @@
   }
   body .wrapper .card.selfcare {
     grid-area: selfcare;
+  }
+}
+@media (min-width: 1000px) and (min-height: 1100px) {
+  body {
+    font-size: 1.5rem;
+  }
+  body .wrapper {
+    height: 50%;
+  }
+  body .wrapper .main-card .person__info .logo {
+    width: 100%;
+  }
+  body .wrapper .main-card .person__info__details .main-header {
+    font-size: 2.5rem;
+  }
+  body .wrapper .main-card .person__info__details .name {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+  }
+  body .wrapper .main-card .summary-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-left: 0;
+    font-size: 2.5rem;
+  }
+  body .wrapper .card__info .details__day {
+    font-size: 1.8rem;
   }
 }
 *, *::before, *::after {
@@ -100,7 +131,6 @@ img {
 }
 
 body {
-  font-size: 1rem;
   font-family: "Rubik", sans-serif;
   background-color: #0f1424;
   height: 100vh;
@@ -110,6 +140,7 @@ body {
 .wrapper {
   width: 90%;
   max-width: 600px;
+  min-height: 400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -123,6 +154,7 @@ body {
   overflow: hidden;
 }
 .wrapper .main-card .person__info {
+  flex-basis: 70%;
   background-color: #5847eb;
   display: flex;
   align-items: center;
@@ -144,6 +176,7 @@ body {
   font-size: 2rem;
 }
 .wrapper .main-card .summary-type {
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -157,6 +190,9 @@ body {
 .wrapper .main-card .summary-type .type:hover {
   color: #fff;
   cursor: pointer;
+}
+.wrapper .main-card .summary-type .type.active {
+  color: #5847eb;
 }
 .wrapper .card {
   background-color: #ff8c66;
@@ -201,6 +237,9 @@ body {
 .wrapper .card__info .details .hours {
   font-size: 2rem;
   font-weight: 300;
+}
+.wrapper .card__info .details__day {
+  font-size: 1.2rem;
 }
 .wrapper .card.work {
   background-color: #ff8c66;

@@ -4,6 +4,11 @@
 
 @media (min-width: 1000px) 
 {
+
+
+
+    
+
     body{
         margin: 0;
          display: flex;
@@ -42,6 +47,10 @@
                     align-items: flex-start;
                     
 
+
+                    .logo{
+                        width: 50%;
+                    }
                     &__details{
                         flex-wrap: wrap;
                     
@@ -49,10 +58,7 @@
                         font-weight: 400;
                     }
 
-                    img {
-                        width: 12rem;
-                        border: 3px solid red;
-                    }
+                    
 
                     .name{
                         font-size: 3rem;
@@ -91,6 +97,10 @@
                     gap: 1rem;
                     .hours{
                         font-size: 4rem;
+                    }
+
+                    &__day{
+                        font-size: 1.2rem;
                     }
                 }
             }

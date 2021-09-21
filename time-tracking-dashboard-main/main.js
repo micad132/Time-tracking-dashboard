@@ -15,7 +15,15 @@ const type = document.querySelectorAll('.type');
 
 type.forEach( (type,index) => {
 
+
+
+    
+
     type.addEventListener('click',()=> {
+
+
+        removeActiveType();
+        type.classList.add('active');
         if(index == 0 ){
             
             getDataDaily();
@@ -124,5 +132,17 @@ async function getDataWeekly() {
         day.innerHTML = `Last Week - ${data[index].timeframes.monthly.previous}hrs`
     })
 
+
+}
+
+
+
+//removing active ,,type"
+
+
+function removeActiveType() {
+
+
+    type.forEach( type => type.classList.remove('active'))
 
 }
